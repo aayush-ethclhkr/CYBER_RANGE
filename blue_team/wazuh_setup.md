@@ -1,6 +1,6 @@
 # 🧠 Step 1: Set Up Wazuh Manager
 
-## 🌱 What You Are Building
+## What You Are Building
 
 You are setting up a central security server that will:
 
@@ -9,14 +9,14 @@ You are setting up a central security server that will:
 - Generate alerts
 - Show everything on a dashboard
 
-👉 After this step, you’ll have:
+ After this step, you’ll have:
 
-- 🖥️ A web dashboard (your SOC screen)
-- ⚙️ A backend engine (log processing)
+-  A web dashboard (your SOC screen)
+-  A backend engine (log processing)
 
 ---
 
-## 🖥️ 1. System Requirements (Your VM)
+##  1. System Requirements (Your VM)
 
 Before installation, make sure your VM has:
 
@@ -25,15 +25,15 @@ Before installation, make sure your VM has:
 - CPU: 2–4 cores
 - Disk: 40+ GB
 
-💡 This VM will later come from Terraform, but for now you can install manually for testing.
+ This VM will later come from Terraform, but for now you can install manually for testing.
 
 ---
 
-## 📦 2. Install Wazuh (Single Node – Easiest Way)
+##  2. Install Wazuh (Single Node – Easiest Way)
 
 Wazuh provides an all-in-one installer (recommended approach).
 
-### ⚙️ Run These Commands
+### Run These Commands
 
 ```bash
 curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
@@ -42,7 +42,7 @@ sudo bash wazuh-install.sh -a
 
 ---
 
-## 🧩 What This Installs
+##  What This Installs
 
 Automatically sets up:
 
@@ -50,11 +50,11 @@ Automatically sets up:
 - Wazuh Indexer (Elasticsearch backend)
 - Wazuh Dashboard (web UI)
 
-👉 No need to install separately — this is why we use `-a`
+ No need to install separately — this is why we use `-a`
 
 ---
 
-## ⏳ 3. Wait for Installation
+##  3. Wait for Installation
 
 This takes approximately:
 
@@ -68,18 +68,18 @@ During this process:
 
 ---
 
-## 🔑 4. Get Login Credentials
+##  4. Get Login Credentials
 
 At the end, you’ll see something like:
 
 User: admin  
 Password: <generated-password>
 
-⚠️ Save this carefully.
+ Save this carefully.
 
 ---
 
-## 🌐 5. Access the Dashboard
+##  5. Access the Dashboard
 
 Open your browser:
 
@@ -91,8 +91,7 @@ https://192.168.1.10
 
 ---
 
-## ⚠️ First Login Notes
-
+## First Login Notes
 - You may see SSL warning → click Advanced → Proceed
 - Login using:
   - username: admin
@@ -100,7 +99,7 @@ https://192.168.1.10
 
 ---
 
-## 🧭 6. What You Should See
+##  6. What You Should See
 
 After login, you’ll land on:
 
@@ -108,13 +107,13 @@ After login, you’ll land on:
 - Security events panel
 - Agent status section
 
-👉 Right now it will feel empty — that’s normal.
+ Right now it will feel empty — that’s normal.
 
 No agents = no data yet.
 
 ---
 
-## 🧪 7. Verify Services (Important Check)
+##  7. Verify Services (Important Check)
 
 Run:
 
@@ -130,7 +129,7 @@ active (running)
 
 ---
 
-## 🔥 8. Open Required Ports (If Needed)
+##  8. Open Required Ports (If Needed)
 
 If firewall is enabled:
 
@@ -143,7 +142,7 @@ sudo ufw allow 443/tcp
 
 ---
 
-## 🌊 What You’ve Achieved (Pause and Understand)
+##  What You’ve Achieved (Pause and Understand)
 
 Right now, you have built:
 
@@ -155,9 +154,9 @@ But it is still blind.
 
 ---
 
-## 🔗 How This Connects to Your Full Project
+##  How This Connects to Your Full Project
 
-### 🧱 Infrastructure Layer
+###  Infrastructure Layer
 
 This Wazuh VM will later be:
 
@@ -166,7 +165,7 @@ This Wazuh VM will later be:
 
 ---
 
-### 🔴 Red Engine
+### Red Engine
 
 When MITRE CALDERA attacks:
 
@@ -175,7 +174,7 @@ When MITRE CALDERA attacks:
 
 ---
 
-### 🎯 White Cell
+###  White Cell
 
 Your alerts → used for:
 
@@ -184,6 +183,6 @@ Your alerts → used for:
 
 ---
 
-## 🚀 Next Step
+##  Next Step
 
-👉 Install and connect Wazuh Agents to start receiving real data.
+ Install and connect Wazuh Agents to start receiving real data.
