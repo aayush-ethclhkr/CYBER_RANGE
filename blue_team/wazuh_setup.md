@@ -1,4 +1,4 @@
-# 🧠 Step 1: Set Up Wazuh Manager
+#  Step 1: Set Up Wazuh Manager
 
 ## What You Are Building
 
